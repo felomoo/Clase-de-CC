@@ -1,0 +1,46 @@
+#def nombre_subrutina(lista_parametros):
+#    return
+
+
+def area_circulo(radio):
+    return 3.14 *pow(radio, 2)
+
+def areaAnillo(re, ri):
+    return area_circulo(re) - area_circulo(ri)
+
+x = int(input("Ingrese un numero para sustituir al radio externo\n")) 
+y = int(input("Ingrese un numero para sustituir al radio interno\n"))
+
+#print(area_circulo(x))
+print(areaAnillo(x, y))
+
+#FORMA PARA VER SOLUCIONES EJEMPLO 6
+def esSolucion(a, b, c, x):
+    y = (a*pow(x,2)) + (b*x) + c
+    if y == 0:
+        return True
+    else:
+        return False
+def main():
+    a = int(input("Ingrese el numero A\n"))
+    b = int(input("Ingrese el numero B\n"))
+    c = int(input("Ingrese el numero C\n"))
+    x = int(input("Ingrese el numero X\n"))
+
+    r = esSolucion(a, b, c, x)
+    if r:
+        print("{} Es solucion a {}x^2 + {}x + {}".format(x, a, b, c))
+    else:
+        print("{} NO es solucion a {}x^2 + {}x + {}".format(x, a, b, c))
+
+main()
+
+#FORMA PARA BUSCAR EN STRING
+def buscarNombre(nombreCompleto):
+    espacio = nombreCompleto.find(" ")
+    nombre = nombreCompleto[:espacio]
+    apellido = nombreCompleto[espacio+1:]
+    print("Nombre [{}] - Apellido [{}]".format(nombre, apellido))
+
+nombre = input("Ingrese su nombre: \n")
+buscarNombre(nombre)
