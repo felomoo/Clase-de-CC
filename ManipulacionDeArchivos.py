@@ -27,5 +27,7 @@ def escribirSeguido():
     archivo=open("prueba2.txt", "a")
     archivo.write("Siguiente linea\n")
     archivo.close()
+    
+#Modificar a la subrutina que quieran probar
 
 escribirSeguido()
